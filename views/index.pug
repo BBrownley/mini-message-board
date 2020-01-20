@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  
+  h1 Mini Message Board
+
+  div(class="messages")
+    each message in messages
+      div(class="message")
+        span(class="message-added")= "[" + message.added + "] "
+        span(class="message-user")= message.user + ": "
+        span(class="message-text")= message.text
+        
+
+  a(href="/new", class="add-message") create message
+    

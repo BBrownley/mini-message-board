@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+        <h1>Mini Message Board</h1>
+    </header>
+
+    <h2 class="new-message-header">New message</h2>
+    <form action="/new" method="POST" id="messageform" name="messageform" onsubmit="return validateForm()">
+        <input name="user" type="text" placeholder="user" tabindex="1" class="new-message-user" required>
+        <input type="submit" value="Submit" tabindex="3" class="new-message-submit">
+    </form>
+    <textarea name="messageText" form="messageform" placeholder="message" cols="31" rows="10" class="new-message-textarea" tabindex="2" required></textarea>
+
+    
+</body>
+
+<script>
+
+function validateForm() {
+    const userFieldValue = document.forms["messageform"]["user"].value;
+    const userMessageValue = document.forms["messageform"]["messageText"].value;
+
+    if (userFieldValue.trim() == "" || userFieldValue == null) {
+        alert("Name must be filled out")
+        return false;
+    }
+
+    if (userMessageValue.trim() == "" || userMessageValue == null) {
+        alert("Message must be filled out")
+        return false;
+    } else {
+        return true;
+    }
+}
+
+</script>
+
+</html>

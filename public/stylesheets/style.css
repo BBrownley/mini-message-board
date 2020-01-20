@@ -1,0 +1,86 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-weight: bold;
+  background-color: #00B7FF;
+  margin-top: 10px;
+}
+
+.message {
+  /* background-color: gray; */
+  padding: 10px 10px 10px 0;
+  margin-bottom: 10px;
+}
+
+.message:last-of-type {
+  padding: 10px 10px 0 0;
+}
+
+.add-message {
+  display: inline-block;
+}
+
+.messages {
+  /* background-color: antiquewhite; */
+  padding: 10px;
+  border: 1px solid black;
+  margin-bottom: 10px;
+}
+
+.keys {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.message-added {
+  color: rgb(168, 168, 168);
+}
+
+.message-user {
+  font-weight: bold;
+}
+
+#messageform {
+  /* background-color: #00B7FF; */
+}
+
+#messageform > input.new-message-user {
+  display: inline-block;
+  width: 170px;
+}
+
+#messageform > input.new-message-submit {
+  display: inline-block;
+  width: 60px;
+}
+
+.new-message-textarea {
+  margin-top: 5px;
+  width: 233px;
+}
+
+.new-message-submit {
+  background-color: #00B7FF;
+  border: 2px solid black;
+  font-weight: bold;
+  color: white;
+  margin-left: 1px;
+  /* border-radius: 5px; */
+}
+
+.new-message-submit:hover {
+  cursor: pointer;
+}
+
+.new-message-header {
+  margin-top: 40px;
+}
